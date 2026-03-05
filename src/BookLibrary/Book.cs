@@ -6,12 +6,12 @@ namespace BookLibrary
         public string Genre;
         public int Year;
         public string Author;
-        public bool IsCompleted = false;
-        public Game(string genre, string title, int year, string author, bool iscompleted)
+        public bool IsCompleted;
+        public Book(string title, string genre, int year, string author, bool iscompleted)
         {
             Title = title;
             Genre = genre;
-            Year = year;
+            Year = year;        
             Author = author;
             IsCompleted = iscompleted;
         }
@@ -19,11 +19,11 @@ namespace BookLibrary
         {
             if (IsCompleted == false)
             {
-                System.Console.WriteLine($"Книга {Title}, Жанр: {Genre}, Год{Year}, Автор {Platform}, Статус : не прочитана.");
+                System.Console.WriteLine($"Книга {Title}, Жанр: {Genre}, Год{Year}, Автор {Author}, Статус : не прочитана.");
             }
             else
             {
-                System.Console.WriteLine($"Книга {Title}, Жанр: {Genre}, Год{Year}, Автор {Platform}, Статус: прочитана.");
+                System.Console.WriteLine($"Книга {Title}, Жанр: {Genre}, Год{Year}, Автор {Author}, Статус: прочитана.");
             }
         }
         public void MarkAsCompleted()

@@ -1,11 +1,9 @@
 namespace BookLibrary {
     class Library {
         public string CollectionName;
-        //public string Direction;
         public List<Book> Books;
-        public Library(string collectionName, string direction) {
+        public Library(string collectionName) {
             CollectionName = collectionName;
-            //Direction = direction;
             Books = new List<Book>();
         }
         public void AddBook(Book Book) {

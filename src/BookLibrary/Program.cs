@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace BookLibrary;
+
+class Program {
+    static void Main(string[] args) {
+        Book b1 = new Book("Гордость и предубеждение", "роман", 1813, "Джейн Остин", false);
+        Book b2 = new Book("1984", "антиутопия", 1949, "Джордж Оруэлл", false);
+        Book b3 = new Book("Портрет Дориана Грея", "философский роман", 1890, "Оскар Уайльд", true);
+        Book b4 = new Book("Унесённые ветром", "исторический роман", 1936, "Маргарет Митчелл", true);
+        Book b5 = new Book("Маленький принц", "философская сказка", 1943, "Антуан де Сент‑Экзюпери",false);
+        Book b6 = new Book("Девушка с татуировкой дракона", "детектив/триллер", 2005, "Стиг Ларссон",true);
+        Book b7 = new Book("Автостопом по галактике", "научная фантастика/юмор", 1979, "Дуглас Адамс",false);
+        Book b8 = new Book("Маленькие женщины", "семейная сага/роман взросления", 1868, "Луиза Мэй Олкотт", false);
+        Book b9 = new Book("Не отпускай меня", "антиутопия/психологическая проза", 2005, "Кадзуо Исигуро",true);
+        Book b10 = new Book("Ночная стража", "юмористическое фэнтези", 2002, "Терри Пратчетт",false);
+        Library c1 = new Library("Шкаф №1");
+        c1.AddBook(b1);
+        c1.ShowAllBooks();
+
+    }
+}
